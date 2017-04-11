@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 class UserList extends Component {
+  // fetch all data here. fetchUsers() is action
   componentWillMount() {
     this.props.fetchUsers();
   }
 
+  // how to display single user info.
   renderUser(user) {
     return (
       <div key={user.id} className="card card-block">
